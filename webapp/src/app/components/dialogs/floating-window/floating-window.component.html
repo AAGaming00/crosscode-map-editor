@@ -7,6 +7,7 @@
 >
 	<div class="toolbar" fxLayout="row" fxLayoutAlign="center" cdkDragHandle>
 		<span fxFlexAlign="center" class="title" style="pointer-events: none;" fxFlex>{{title}}</span>
+		<ng-content select=[buttons]></ng-content>
 		<button *ngIf="showMin" mat-button color="primary" fxFlexAlign="center" class="toolbar-button minimize-button"
 		        (click)="toggle()">-
 		</button>

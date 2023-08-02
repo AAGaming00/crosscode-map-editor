@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { BabylonComponent } from './components/babylon/babylon.component';
 import { CaptionsComponent } from './components/captions/captions.component';
 import { FloatingWindowComponent } from './components/dialogs/floating-window/floating-window.component';
+import { GamePreviewComponent } from './components/dialogs/floating-window/game-preview/game-preview.component';
 import { HistoryComponent } from './components/dialogs/floating-window/history/history.component';
 import { TileSelectorComponent } from './components/dialogs/floating-window/tile-selector/tile-selector.component';
 import { ListSearchOverlayComponent } from './components/dialogs/list-search-overlay/list-search-overlay.component';
@@ -94,6 +95,7 @@ const WIDGETS = [
 		MapContentSettingsComponent,
 		OffsetMapComponent,
 		SettingsComponent,
+		GamePreviewComponent,
 		HistoryComponent,
 		OverlayPanelComponent,
 		HostDirective,

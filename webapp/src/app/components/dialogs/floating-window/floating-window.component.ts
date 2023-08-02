@@ -18,6 +18,7 @@ export class FloatingWindowComponent implements OnInit, OnChanges {
 	@Input() showClose = false;
 	@Input() showMin = true;
 	
+	@Output() visibilityChange = new EventEmitter<boolean>();
 	@Output() close = new EventEmitter<void>();
 	@Output() dragEnd = new EventEmitter<void>();
 	
@@ -53,6 +54,7 @@ export class FloatingWindowComponent implements OnInit, OnChanges {
 	toggle() {
 		this.visible = !this.visible;
 		this.updateContentStyle();
+		this.visibilityChange.emit(this.visible);
 	}
 	
 	onClose() {

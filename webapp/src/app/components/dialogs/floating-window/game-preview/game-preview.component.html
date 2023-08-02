@@ -1,0 +1,22 @@
+<app-floating-window
+	[right]="'4px'"
+	[top]="'4px'"
+	[title]="'Game Preview'"
+	[width]="'568px'"
+	[height]="'320px'"
+	[style.display]="hide ? 'none' : ''"
+	[visible]="false"
+	(visibilityChange)="onVisibilityChange($event)"
+>
+	<div class="buttons" buttons>
+		<button mat-button color="primary" fxFlexAlign="center" class="toolbar-button reload-button"
+			(click)="reloadMap()">reload map
+		</button>
+	</div>
+	<div class="game-container" fxLayout="column">
+		<iframe fxFlex="1 1 auto" class="game-frame" allow="autoplay" src="crosscode-launch://." #gameFrame></iframe>
+		<!--<div fxFlex="0 0 auto" fxFlexAlign="end" class="button-container">-->
+		<!--<button mat-button>delete</button>-->
+		<!--</div>-->
+	</div>
+</app-floating-window>

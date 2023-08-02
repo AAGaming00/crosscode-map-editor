@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+@import "theme";
+
+$primary: map-get($theme, primary);
+$accent: map-get($theme, accent);
+
+// $listItemHeight: 28px;
+
+// TODO fix dragging window with iframe
+
+.game-container {
+	position: relative;
+	background-color: mat.get-color-from-palette($accent, 800);
+	height: 100%;
+	width: 100%;
+}
+
+.reload-button {
+	font-size: 18px !important;
+	font-weight: 800;
+	text-transform: none;
+}
